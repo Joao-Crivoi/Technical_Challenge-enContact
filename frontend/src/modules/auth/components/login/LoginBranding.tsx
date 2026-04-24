@@ -1,24 +1,36 @@
-import InstitutionalLinks from '@/components/ui/InstitucionalLinks';
-import SocialLinks from '@/components/ui/SocialLinks';
-import logo from '@/assets/logo_large.svg';
 import { useTranslation } from 'react-i18next';
+import { SocialLinks, Blob, InstitutionalLinks } from '@/components/ui';
+
+import logo from '@/assets/logo/logo_large.svg';
 
 export function LoginBranding() {
   const { t } = useTranslation();
   return (
-    <section>
+    <section className="relative flex flex-col justify-between p-12 w-full text-white overflow-hidden">
       <img
         src={logo}
         alt="enContact - logotipo"
         width={160}
         height={40}
         loading="lazy"
+        className="relative z-10"
       />
-      <h1>{t('branding.tagline')}</h1>
-      <p>{t('branding.description')}</p>
 
-      <SocialLinks />
-      <InstitutionalLinks />
+      <Blob />
+
+      <div className="flex flex-col gap-6 relative z-10">
+        <h1 className="text-4xl font-bold leading-tight">
+          {t('branding.tagline')}
+        </h1>
+        <p className="text-lg opacity-90">{t('branding.description')}</p>
+        <div className="flex gap-4">
+          <InstitutionalLinks />
+        </div>
+      </div>
+
+      <div className="relative z-10">
+        <SocialLinks />
+      </div>
     </section>
   );
 }

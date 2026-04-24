@@ -1,11 +1,15 @@
 import { LoginBranding } from './LoginBranding';
 import { LoginForm } from './LoginForm';
 
-export default function LoginPage() {
+export function LoginPage() {
   return (
-    <main>
-      <LoginBranding />
-      <LoginForm />
+    <main className="flex min-h-screen animate-fade-in">
+      <section className="hidden lg:flex lg:w-1/2 animated-gradient rounded-e-xl">
+        <LoginBranding />
+      </section>
+      <section className="flex w-full lg:w-1/2 items-center justify-center p-8 bg-cream">
+        <LoginForm />
+      </section>
     </main>
   );
 }

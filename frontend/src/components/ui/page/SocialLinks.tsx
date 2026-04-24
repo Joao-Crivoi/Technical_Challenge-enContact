@@ -6,18 +6,19 @@ import {
   FaWhatsapp,
 } from 'react-icons/fa';
 
-export default function SocialLinks() {
+export function SocialLinks() {
   return (
     <nav aria-label="Redes sociais">
-      <ul>
+      <ul className="flex gap-4">
         <li>
           <a
             href="https://www.linkedin.com/company/encontactbr/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn da enContact"
+            className="text-white/70 hover:text-white hover:scale-110 transition-all duration-200 block"
           >
-            <FaLinkedin size={20} />
+            <FaLinkedin size={28} />
           </a>
         </li>
 
@@ -27,8 +28,9 @@ export default function SocialLinks() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram da enContact"
+            className="text-white/70 hover:text-white hover:scale-110 transition-all duration-200 block"
           >
-            <FaInstagram size={20} />
+            <FaInstagram size={28} />
           </a>
         </li>
 
@@ -38,8 +40,9 @@ export default function SocialLinks() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube da enContact"
+            className="text-white/70 hover:text-white hover:scale-110 transition-all duration-200 block"
           >
-            <FaYoutube size={20} />
+            <FaYoutube size={28} />
           </a>
         </li>
 
@@ -49,8 +52,9 @@ export default function SocialLinks() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook da enContact"
+            className="text-white/70 hover:text-white hover:scale-110 transition-all duration-200 block"
           >
-            <FaFacebook size={20} />
+            <FaFacebook size={28} />
           </a>
         </li>
 
@@ -60,8 +64,9 @@ export default function SocialLinks() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp da enContact"
+            className="text-white/70 hover:text-white hover:scale-110 transition-all duration-200 block"
           >
-            <FaWhatsapp size={20} />
+            <FaWhatsapp size={28} />
           </a>
         </li>
       </ul>

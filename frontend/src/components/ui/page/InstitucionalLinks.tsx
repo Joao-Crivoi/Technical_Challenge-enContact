@@ -1,28 +1,29 @@
 import { useTranslation } from 'react-i18next';
+import { LinkButton } from './LinkButton';
 
-export default function InstitutionalLinks() {
+export function InstitutionalLinks() {
   const { t } = useTranslation();
 
   return (
     <nav aria-label={t('institutional.navLabel')}>
-      <ul>
+      <ul className="flex gap-3">
         <li>
-          <a
+          <LinkButton
             href="https://www.encontact.com.br/agende-uma-demonstracao/"
             target="_blank"
             rel="noopener noreferrer"
           >
             {t('institutional.schedule')}
-          </a>
+          </LinkButton>
         </li>
         <li>
-          <a
+          <LinkButton
             href="https://www.encontact.com.br/sobre-nos/"
             target="_blank"
             rel="noopener noreferrer"
           >
             {t('institutional.about')}
-          </a>
+          </LinkButton>
         </li>
       </ul>
     </nav>

@@ -1,1 +1,65 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+/* ============================================
+   THEME
+   ============================================ */
+@theme {
+  --color-brand: oklch(75% 0.183 55.934);
+  --color-cream: oklch(97% 0.02 80);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+.animate-fade-in {
+  animation: fade-in 0.5s ease forwards;
+}
+
+.animated-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(75% 0.183 55.934),
+    oklch(65% 0.2 35),
+    oklch(60% 0.22 20)
+  );
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+.blob {
+  animation: blob 8s ease-in-out infinite;
+}

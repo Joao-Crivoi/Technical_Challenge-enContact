@@ -1,8 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ProtectedRoute, LoginPage } from '@/modules/auth';
 
-import ProtectedRoute from './modules/auth/components/ProtectedRoute';
-
-const LoginPage = () => <div>Login</div>;
 const MainPage = () => <div>Main</div>;
 
 export function App() {
