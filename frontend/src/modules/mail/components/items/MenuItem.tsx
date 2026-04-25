@@ -2,6 +2,7 @@ import type { Menu } from '../../types';
 import { useMenuStore } from '../../stores/menuStore';
 import { useState } from 'react';
 import { FaChevronDown, FaChevronRight } from 'react-icons/fa';
+import { useSidebarStore } from '../../stores';
 
 interface MenuItemProps {
   menu: Menu;
@@ -10,7 +11,7 @@ interface MenuItemProps {
 export function MenuItem({ menu }: MenuItemProps) {
   const [isOpen, setIsOpen] = useState(false);
   const { selectedSubMenu, setSelectedSubMenu } = useMenuStore();
-
+  const { close } = useSidebarStore();
   return (
     <li>
       <button
@@ -26,7 +27,10 @@ export function MenuItem({ menu }: MenuItemProps) {
           {menu.subMenus.map((sub) => (
             <li key={sub.id}>
               <button
-                onClick={() => setSelectedSubMenu(sub)}
+                onClick={() => {
+                  setSelectedSubMenu(sub);
+                  close();
+                }}
                 className={`w-full text-left px-4 py-2 text-sm rounded-lg transition-colors duration-200
                   ${
                     selectedSubMenu?.id === sub.id
