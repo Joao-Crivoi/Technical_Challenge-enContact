@@ -2,7 +2,7 @@
 
 > Practical test for Front-end Developer at [enContact](https://www.encontact.com.br) — a customer service management platform for email and WhatsApp.
 
-🌐 [English Version](./README.md)
+🌐 [Versão em Português](./README.pt.md)
 
 ![Status](https://img.shields.io/badge/status-completed-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
