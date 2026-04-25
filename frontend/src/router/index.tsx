@@ -1,7 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { ProtectedRoute, LoginPage } from '@/modules/auth';
-
-const MainPage = () => <div>Main</div>;
+import { MainPage } from '@/modules/mail';
 
 export function AppRoutes() {
   return (

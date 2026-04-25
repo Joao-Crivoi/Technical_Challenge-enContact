@@ -29,6 +29,7 @@ html {
   --color-text-secondary: oklch(45% 0 0);
   --color-error: oklch(55% 0.22 25);
   --color-error-surface: oklch(97% 0.02 25);
+  --color-hover-subtle: var(--color-primary-200);
 }
 
 .dark {
@@ -39,10 +40,7 @@ html {
   --color-text-secondary: var(--color-primary-300);
   --color-error: oklch(68% 0.22 25);
   --color-error-surface: oklch(22% 0.06 25);
-}
-
-.dark .logo-glow-dark {
-  filter: brightness(2) contrast(0.9);
+  --color-hover-subtle: var(--color-primary-600);
 }
 
 /* ============================================
@@ -127,6 +125,15 @@ html {
 
 .branding-section {
   @apply relative flex flex-col justify-between p-12 w-full text-white overflow-hidden;
+}
+
+/* Mail */
+.sidebar {
+  width: 16rem;
+  min-width: 10rem;
+  max-width: 30rem;
+  resize: horizontal;
+  overflow: auto;
 }
 
 /* ============================================

@@ -1,7 +1,5 @@
 export default {
-  nav: {
-    logout: 'Cerrar sesión',
-    theme: 'Tema',
-    language: 'Idioma',
-  },
+  logout: 'Cerrar sesión',
+  theme: 'Tema',
+  language: 'Idioma',
 };

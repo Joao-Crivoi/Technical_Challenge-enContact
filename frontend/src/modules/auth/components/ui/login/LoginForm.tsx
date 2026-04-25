@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useLoginForm } from '@/modules/auth';
-import logo from '@/assets/logo/logo_icon.svg';
+import { CutLogo } from '@/components/ui';
 import { FormField, Input, Button, ErrorAlert } from '@/components/ui';
 
 export function LoginForm() {
@@ -11,7 +11,7 @@ export function LoginForm() {
   return (
     <section className="w-full max-w-md flex flex-col gap-8">
       <div className="flex lg:hidden absolute left-10 bottom-0 -translate-x-1/2 w-64 h-32 overflow-hidden  opacity-80 pointer-events-none">
-        <img src={logo} alt="" aria-hidden="true" className="w-64 h-64" />
+        <CutLogo className="w-64 h-64" />
       </div>
       <div className="flex flex-col gap-2">
         <h2 className="login-title">{t('login.title')}</h2>

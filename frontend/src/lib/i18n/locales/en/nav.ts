@@ -1,7 +1,5 @@
 export default {
-  nav: {
-    logout: 'Logout',
-    theme: 'Theme',
-    language: 'Language',
-  },
+  logout: 'Logout',
+  theme: 'Theme',
+  language: 'Language',
 };
