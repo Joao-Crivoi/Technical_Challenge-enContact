@@ -11,7 +11,7 @@
 
 ## 🔗 Demo
 
-👉 [Acesse o projeto em produção](https://joao-crivoi.github.io/technical_challenge-encontact)
+👉 [Acesse o projeto em produção](https://joao-crivoi.github.io/Technical_Challenge-enContact/)
 
 **Credenciais de acesso:**
 ```
