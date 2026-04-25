@@ -1,11 +1,132 @@
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  background-color: var(--color-surface);
+}
 
 /* ============================================
    THEME
    ============================================ */
+
 @theme {
-  --color-brand: oklch(75% 0.183 55.934);
-  --color-cream: oklch(97% 0.02 80);
+  --color-primary-50: oklch(97% 0.02 55);
+  --color-primary-100: oklch(92% 0.06 55);
+  --color-primary-200: oklch(85% 0.11 55);
+  --color-primary-300: oklch(78% 0.16 55);
+  --color-primary-400: oklch(72% 0.19 52);
+  --color-primary-500: oklch(63% 0.2 45);
+  --color-primary-600: oklch(53% 0.22 35);
+  --color-primary-700: oklch(42% 0.18 28);
+  --color-primary-800: oklch(28% 0.1 25);
+  --color-primary-900: oklch(15% 0.05 20);
+
+  --color-brand: var(--color-primary-400);
+  --color-surface: oklch(96% 0.01 80);
+  --color-surface-elevated: oklch(100% 0 0);
+  --color-surface-subtle: var(--color-primary-50);
+  --color-text-primary: oklch(15% 0 0);
+  --color-text-secondary: oklch(45% 0 0);
+  --color-error: oklch(55% 0.22 25);
+  --color-error-surface: oklch(97% 0.02 25);
+}
+
+.dark {
+  --color-surface: var(--color-primary-900);
+  --color-surface-elevated: var(--color-primary-800);
+  --color-surface-subtle: var(--color-primary-200);
+  --color-text-primary: oklch(96% 0 0);
+  --color-text-secondary: var(--color-primary-300);
+  --color-error: oklch(68% 0.22 25);
+  --color-error-surface: oklch(22% 0.06 25);
+}
+
+.dark .logo-glow-dark {
+  filter: brightness(2) contrast(0.9);
+}
+
+/* ============================================
+   COMPONENTS
+   ============================================ */
+
+/* Buttons */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 cursor-pointer;
+}
+
+.btn-primary {
+  @apply bg-brand text-white hover:bg-brand/90 active:scale-95;
+}
+
+.btn-outline {
+  @apply border-2 border-brand text-brand hover:bg-brand hover:text-white;
+}
+
+.btn-ghost {
+  @apply text-brand hover:bg-brand/10;
+}
+
+.btn-danger {
+  @apply bg-error text-white hover:bg-error/90 active:scale-95;
+}
+
+/* Navigation */
+
+.social-link {
+  @apply text-white/70 hover:text-white hover:scale-110 transition-all duration-200;
+}
+
+.icon-link {
+  @apply flex items-center justify-center rounded-full transition-all duration-200 hover:scale-110;
+}
+
+.icon-link-sm {
+  @apply w-8 h-8;
+}
+.icon-link-md {
+  @apply w-10 h-10;
+}
+.icon-link-lg {
+  @apply w-12 h-12;
+}
+
+.link-btn {
+  @apply inline-block px-4 py-2 rounded-lg font-medium transition-all duration-200;
+}
+
+.link-btn-outline {
+  @apply border-2 border-white text-white hover:bg-white hover:text-brand;
+}
+
+.link-btn-solid {
+  @apply bg-white text-brand hover:bg-brand hover:text-white border-2 border-transparent hover:border-white;
+}
+
+/* Language */
+
+.lang-select {
+  @apply text-sm rounded-lg border border-text-secondary/20 
+         bg-surface-elevated text-text-primary
+         px-2 py-1 outline-none focus:border-brand cursor-pointer
+         transition-all duration-200;
+}
+
+/* Login */
+
+.login-title {
+  @apply text-3xl font-bold text-text-primary;
+}
+
+.login-subtitle {
+  @apply text-text-secondary;
+}
+
+.login-form {
+  @apply flex flex-col gap-6 p-8 rounded-2xl border-2 border-brand/20 shadow-sm bg-surface-elevated;
+}
+
+.branding-section {
+  @apply relative flex flex-col justify-between p-12 w-full text-white overflow-hidden;
 }
 
 /* ============================================
@@ -52,11 +173,12 @@
 .animated-gradient {
   background: linear-gradient(
     135deg,
-    oklch(75% 0.183 55.934),
-    oklch(65% 0.2 35),
-    oklch(60% 0.22 20)
+    oklch(68% 0.18 48),
+    oklch(58% 0.22 30),
+    oklch(50% 0.2 15),
+    oklch(68% 0.18 48)
   );
-  background-size: 200% 200%;
+  background-size: 300% 300%;
   animation: gradient-shift 8s ease infinite;
 }
 
